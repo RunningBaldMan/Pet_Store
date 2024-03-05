@@ -18,6 +18,7 @@ public class PetStoreData {
     private String petStoreState;
     private String petStoreZip;
     private String petStorePhone;
+    private String petStoreName;
 
     private Set<PetStoreCustomer> customers = new HashSet<>();
     private Set<PetStoreEmployee> employees = new HashSet<>();
@@ -29,6 +30,7 @@ public class PetStoreData {
         this.petStoreState = petStore.getPetStoreState();
         this.petStoreZip = petStore.getPetStoreZip();
         this.petStorePhone = petStore.getPetStorePhone();
+        this.petStoreName = petStore.getPetStoreName();
 
         for (Customer customer : petStore.getCustomers()) {
             this.customers.add(new PetStoreCustomer(customer));
